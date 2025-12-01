@@ -1,0 +1,16 @@
+# --- SEGURIDAD (CRÍTICO) ---
+client_secret.json
+token.pickle
+.env
+
+# --- Basura de Python ---
+__pycache__/
+*.pyc
+
+# --- Basura del Sistema ---
+.DS_Store
+Thumbs.db
+
+# --- Carpetas de IDE ---
+.vscode/
+.idea/
