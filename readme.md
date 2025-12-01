@@ -8,13 +8,10 @@
 ## I. INTRODUCCIÓN
 Este proyecto implementa un **Agente Inteligente de Moderación** capaz de filtrar automáticamente la sección de comentarios de videos de YouTube en tiempo real.
 
-Ante la problemática del *cyberbullying* y la ineficacia de los filtros tradicionales basados en palabras clave, este sistema propone una **Arquitectura Híbrida** que combina:
 1.  **Filtrado Determinista (Reglas):** Un diccionario local (Blacklist) para la eliminación inmediata de insultos explícitos y lenguaje soez.
 2.  **Filtrado Probabilístico (Deep Learning):** Un modelo **Transformer BERT Multilingüe** que analiza la semántica y el sentimiento del texto para detectar toxicidad contextual, odio sutil o sarcasmo agresivo.
 
 El sistema utiliza la **YouTube Data API v3** bajo el protocolo OAuth 2.0 para garantizar permisos administrativos seguros (lectura y eliminación) sobre el canal del usuario.
-
----
 
 ## II. REQUERIMIENTOS
 
@@ -28,7 +25,6 @@ El sistema utiliza la **YouTube Data API v3** bajo el protocolo OAuth 2.0 para g
 * `transformers` (Hugging Face): Pipeline de inferencia para el modelo NLP.
 * `torch`: Backend de cálculo tensorial para la IA.
 
----
 
 ## III. ESTRUCTURA DEL PROYECTO 
  PROYECTO_IA
@@ -46,17 +42,17 @@ Modelo Base: nlptown/bert-base-multilingual-uncased-sentiment.Entrenamiento:
 El modelo ha sido pre-entrenado con el Multilingual Amazon Reviews Corpus (millones de registros en 6 idiomas).
 
 Pre-procesamiento:Tokenización: Conversión de texto a vectores numéricos (embeddings).Truncamiento: Límite de 512 tokens por comentario para eficiencia computacional.
-
 Validación: Se utiliza un esquema de In-the-wild Testing (Pruebas en entorno real) usando datos en vivo (Data Streaming) de la API de YouTube.
 
-## V. INSTALACIÓN Y CONFIGURACIÓN: Por razones de seguridad informática, las credenciales (client_secret.json) NO se incluyen en este repositorio. Siga estos pasos para configurar su entorno:
+## V. INSTALACIÓN Y CONFIGURACIÓN: Por razones de seguridad informática, las credenciales (client_secret.json) NO se incluyen en este repositorio. 
+
+Siga estos pasos para configurar su entorno:
 
 1. Clonar el repositorio: git clone ...
 
 2. Instalar dependencias: pip install -r requirements.txt
 
 3. Configuración de Credenciales Google Cloud 
-
 Para replicar el entorno de ejecución, siga estos pasos exactos:
 
 1.  **Crear Proyecto y Habilitar API:**
@@ -115,4 +111,5 @@ El sistema utiliza métricas de confianza (Confidence Score) para la toma de dec
 Umbral de Toxicidad: $\le$ 1 Estrella.
 
 Precisión: El modelo híbrido minimiza los falsos positivos, permitiendo críticas negativas válidas (2-3 estrellas) mientras elimina agresiones directas.Latencia: < 500ms por comentario en inferencia CPU.
+
 
