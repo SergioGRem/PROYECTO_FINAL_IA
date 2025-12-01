@@ -1,16 +1,16 @@
-# --- Seguridad ---
+# Seguridad
 client_secret.json
 token.pickle
 .env
 
-# --- Basura de Python ---
+# Basura de Python
 __pycache__/
 *.pyc
 
-# --- Basura del Sistema ---
+# Basura del Sistema
 .DS_Store
 Thumbs.db
 
-# --- Carpetas de IDE ---
+# Carpetas de IDE
 .vscode/
 .idea/
