@@ -1,4 +1,4 @@
-# --- SEGURIDAD (CRÍTICO) ---
+# --- Seguridad ---
 client_secret.json
 token.pickle
 .env
