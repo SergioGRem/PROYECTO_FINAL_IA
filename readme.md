@@ -1,4 +1,4 @@
-# Sistema Híbrido de Moderación de Comentarios en YouTube con IAgit commit --amend -m "
+# Sistema Híbrido de Moderación de Comentarios en YouTube "
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python&logoColor=white)
 ![AI](https://img.shields.io/badge/AI-Transformers%20BERT-orange?style=for-the-badge)
@@ -119,6 +119,7 @@ El sistema utiliza métricas de confianza (Confidence Score) para la toma de dec
 Umbral de Toxicidad: $\le$ 1 Estrella.
 
 Precisión: El modelo híbrido minimiza los falsos positivos, permitiendo críticas negativas válidas (2-3 estrellas) mientras elimina agresiones directas.Latencia: < 500ms por comentario en inferencia CPU.
+
 
 
 
